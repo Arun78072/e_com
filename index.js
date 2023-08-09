@@ -25,9 +25,14 @@ app.use('/uploads', express.static('uploads'));
 const server = http.createServer(app);
 // const io = socketIO(server);
 
+const allowedOrigins = [
+    'https://e-com-backend-murex.vercel.app/',
+    'http://localhost:3000/'
+  ];
+
 const io = new Server(server,{
     cors : {
-        // origin :'http://localhost:3001'
+        origin :allowedOrigins
     }
 })
 let users = 0 
