@@ -32,7 +32,7 @@ const allowedOrigins = [
 
 const io = new Server(server,{
     cors : {
-        origin :allowedOrigins
+        origin :''
     }
 })
 let users = 0 
